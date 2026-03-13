@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>HELLO,DAD</title>
+    <style>
+        /* 重置浏览器默认样式，避免干扰 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 页面整体布局：内容垂直+水平都居中 */
+        body {
+            background-color: #f0f8ff;
+            font-family: "微软雅黑", sans-serif;
+            /* 让页面内容垂直居中（可选，更美观） */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 15px; /* 和下面的文字留空 */
+        }
+        p {
+            margin-bottom: 20px; /* 和图片留空 */
+            font-size: 16px;
+            color: #666;
+        }
+        .my-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px; /* 和图片留空 */
+        }
+        .my-btn:hover {
+            background-color: #2980b9;
+        }
+        /* 图片样式：600px宽 + 绝对居中 + 不变形 */
+        .my-img {
+            width: 600px !important;       /* 固定小尺寸 */
+            height: auto !important;       /* 高度自动，避免变形 */
+            border-radius: 10px;
+            border: 3px solid #3498db;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /* 兜底居中：即使父级样式变了，图片也自己居中 */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>你好，有在想我们吗？</h1>
+    <p>我们也想你哦😜</p>
+    
+    <!-- 你的目标图片链接 -->
+    <img 
+        src="https://s41.ax1x.com/2026/03/13/peAG2E6.jpg"
+        alt="自定义图片" 
+        class="my-img"
+    >
+    
+    <button class="my-btn" id="clickBtn">点我有惊喜</button>
+
+    <script>
+        const btn = document.getElementById('clickBtn');
+        btn.addEventListener('click', function() {
+            alert('LOVE YOU♥');
+        });
+    </script>
+</body>
+</html>
